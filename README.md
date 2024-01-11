@@ -1,8 +1,18 @@
-# Genomic Analysis and Phylogeography Course 2024
+# Genomic Analysis and Phylogeography Workshop 2024
 
-This page contains all the materials for the lecture and practical sessions for the Genomic Analysis and Phylogeography Course.
+This page contains all the materials for the lecture and practical sessions for the Genomic Analysis and Phylogeography Workshop.
 
 5th - 9th February 2024, Simon Fraser University.
+
+### Preworkshop instructions
+
+The following files will link you to documents with instructions for downloading relevant analysis software and visualization tools for the workshop:
+
+Mac users: [click here](Pre-Workshop_instructions/Mac_instructions.md)<br>
+Windows users: [click here](Pre-Workshop_instructions/Windows_instructions.md)<br>
+Linux users: [click here](Pre-Workshop_instructions/Linux_instructions.md)<br>
+
+### Schedule
 
 | Time and Date                  | Topic                                           | Itinerary                                                 |
 |--------------------------------|-------------------------------------------------|-----------------------------------------------------------|
