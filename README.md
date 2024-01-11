@@ -1,5 +1,7 @@
 # Genomic Analysis and Phylogeography Workshop
-## Simon Fraser University 5th - 9th February 2024 
+
+## 5th - 9th February 2024, Simon Fraser University
+
 
 ![Title Image](Sequence_trees.png)
 
