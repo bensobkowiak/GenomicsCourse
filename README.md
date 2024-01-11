@@ -27,4 +27,4 @@ Linux users: [click here](Pre-Workshop_instructions/Linux_instructions.md)<br>
 | Friday 9th February <br> 9am – 1pm  | [Practical session: Self guided practical: Full pipeline](Practicals/Full_pipeline_test.md) | • Independent application of the full analysis pipeline to a novel dataset<br>• From raw sequence data to phylogeographic analysis |
 
 
-Author: Dr. Ben Sobkowiak
+Author: Dr. Ben Sobkowiak (b.sobkowiak.12 at ucl.ac.uk)
