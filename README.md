@@ -5,7 +5,7 @@
 
 ![Title Image](Sequence_trees.png)
 
-### Preworkshop instructions
+### Pre-workshop instructions
 
 The following files will link you to documents with instructions for downloading relevant analysis software and visualization tools for the workshop:
 
