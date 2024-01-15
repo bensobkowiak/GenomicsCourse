@@ -5,6 +5,12 @@
 
 ![Title Image](Sequence_trees.png)
 
+---
+
+Please register your interest in the course [here](https://form.jotform.com/240141804355347) before the 26th January 2024
+
+---
+
 ### Pre-workshop instructions
 
 The following files will link you to documents with instructions for downloading relevant analysis software and visualization tools for the workshop:
