@@ -23,7 +23,7 @@ Linux users: [click here](Pre-Workshop_instructions/Linux_instructions.md)<br>
 
 | Time and Date                  | Topic                                           | Itinerary                                                 |
 |--------------------------------|-------------------------------------------------|-----------------------------------------------------------|
-| Monday 5th February <br> 10am – 12pm | [Lecture: Introduction and key concepts](Lectures/Day1_lecture.pdf) | • Course outline<br>• Genomic sequencing and data analysis<br>• Introduction to genomic epidemiology |
+| Monday 5th February <br> 10am – 12pm | [Lecture: Introduction and key concepts](Lectures/Introduction.md) | • Course outline<br>• Genomic sequencing and data analysis<br>• Introduction to genomic epidemiology |
 | Monday 5th February <br> 12:30pm – 4:30pm | [Practical session: Whole genome sequence data analysis](Practicals/WGS_Analysis.md) | • Obtaining sequencing data<br>• Raw sequencing data manipulation – Quality control and visualization<br>• Reference-based mapping |
 | Tuesday 6th February <br> 9am – 10:30am | [Lecture: Variant detection and phylogenetic trees](Lectures/VariantCalling.md) | • What is a variant?<br>• How do we call variants?<br>• Variant calling software and quality control<br>• What are phylogenetic trees?<br>• Different types of phylogenies<br>• Phylogenetic uncertainty – bootstrapping etc. |
 | Tuesday 6th February <br> 10:45am – 4:30pm | [Practical session: Variant calling and maximum likelihood trees](Practicals/VariantCalling_MLtrees.md) | • Variant calling from sequence alignment file<br>• SNP filtering and QC<br>• Building SNP matrices<br>• Maximum likelihood tree construction |
