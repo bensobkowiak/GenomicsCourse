@@ -2,11 +2,16 @@
 
 ## 5th - 9th February 2024, Simon Fraser University
 
+### View on [GitHub](https://github.com/bensobkowiak/GenomicsCourse/)
+
 ![Title Image](Sequence_trees.png)
+
 
 ---
 
+
 Please register your interest in the course [here](https://form.jotform.com/240141804355347) before the 26th January 2024
+
 
 ---
 
