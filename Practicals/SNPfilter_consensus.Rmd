@@ -10,5 +10,10 @@ options(stringsAsFactors=F)
 In this exercise we will view the VCF output file from variant calling in R and perform some steps to 
 
 ```{r, message=FALSE}
-library(
+library(ape)
 ```
+
+
+<br>
+
+Next acitvity: [. Align consensus sequences](Align_consensus.md)<br>
