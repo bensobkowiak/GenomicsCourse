@@ -1,4 +1,4 @@
-# Genomic Analysis and Phylogeography Workshop
+# Genomic Analysis and Phylodynamics Workshop
 
 ## 5th - 9th February 2024, Simon Fraser University
 
@@ -33,7 +33,7 @@ Linux users: [click here](Pre-Workshop_instructions/Linux_instructions.md)<br>
 | Tuesday 6th February <br> 10:45am – 4:30pm | [Practical session: Variant calling and maximum likelihood trees](Practicals/VariantCalling_MLtrees.md) | • Variant calling from sequence alignment file<br>• SNP filtering and QC<br>• Building SNP matrices<br>• Aligning consensus sequences<br>• Maximum likelihood tree construction |
 | Wednesday 7th February <br> 9am – 1pm | [Practical session: Timed phylogenetic trees](Practicals/Phylogenetics.md) | • Continue ML tree construction<br>• One-step timed phylogenetic tree with BEAST2<br>• Two-step timed phylogenies using ML + Bayesian frameworks |
 | Thursday 8th February <br> 9am – 10:30am | [Lecture: Phylogeography and phylodynamics](Lectures/Phylogeography_Phylodynamics.md) | • What are phylogeography and phylodynamics?<br>• Analysis tools and software<br>• Applications to real-world datasets – what can we learn |
-| Thursday 8th February <br> 10:45am – 4:30pm | [Practical session: Epidemiological analysis using phylogenetic trees](Practicals/Phylodynamics.md) | • Phylodynamic analysis in BEAST2<br>• Ancestral state reconstruction<br>• Selection coefficients<br>• Inference of population dynamics |
+| Thursday 8th February <br> 10:45am – 4:30pm | [Practical session: Epidemiological analysis using phylogenetic trees](Practicals/Phylodynamics.md) | • Phylodynamic analysis in BEAST2<br>• Testing for selection <br>• Ancestral state reconstruction  <br>• Genome Wide Association Studies |
 | Friday 9th February <br> 9am – 1pm  | [Practical session: Self guided practical: Full pipeline](Practicals/Full_pipeline_test.md) | • Independent application of the full analysis pipeline to a novel dataset<br>• From raw sequence data to phylogeographic analysis |
 
 
