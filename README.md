@@ -19,9 +19,8 @@ Please register your interest in the course [here](https://form.jotform.com/2401
 
 The following files will link you to documents with instructions for downloading relevant analysis software and visualization tools for the workshop:
 
-Mac users: [click here](Pre-Workshop_instructions/Mac_instructions.md)<br>
+Mac/Linux users: [click here](Pre-Workshop_instructions/MacLinux_instructions.md)<br>
 Windows users: [click here](Pre-Workshop_instructions/Windows_instructions.md)<br>
-Linux users: [click here](Pre-Workshop_instructions/Linux_instructions.md)<br>
 
 ### Schedule
 
