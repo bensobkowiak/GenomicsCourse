@@ -2,14 +2,17 @@
 
 ## Pre-course Instructions
 
-Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
+Please following these instructions to download all programs and data for the course. You will require sufficient space to install all programs and data (~2.5 GB).
 
 ### Data 
 
-Please download all data required for this course by clicking the following link (Note, the file size is ~ MB):
+Please download all data required for this course by clicking the following link (Note, the files in the folder will total ~2 GB):
 
 [Download Data]()
 <br>
+
+Please download all data into the same folder and make a note of the filepath for carrying out the practicals.
+
 <br>
 
 ### Programs and software
