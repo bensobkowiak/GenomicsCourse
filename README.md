@@ -17,10 +17,11 @@ Please register your interest in the course [here](https://form.jotform.com/2401
 
 ### Pre-workshop instructions
 
-The following files will link you to documents with instructions for downloading relevant analysis software and visualization tools for the workshop:
+Please click the link below for instructions to download and install all data and software required for this course:
 
-Mac/Linux users: [click here](Pre-Workshop_instructions/MacLinux_instructions.md)<br>
-Windows users: [click here](Pre-Workshop_instructions/Windows_instructions.md)<br>
+[Pre-course instructions](PreCourse_instructions.md)
+
+---
 
 ### Schedule
 
