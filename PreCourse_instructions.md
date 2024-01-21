@@ -51,9 +51,9 @@ For example, with homebrew on mac, you can simply enter the following command in
 ```bash
 brew install samtools
 ```
-Alternatively, here is a guide to install SAMtools using apt on Ubuntu:
+Alternatively, here is a guide to install SAMtools/BCFtools on Ubuntu:
 
-[Install SAMtools](https://bioinformaticsreview.com/20210404/installing-samtools-on-ubuntu/) <br>
+[Install SAMtools](https://gist.github.com/adefelicibus/f6fd06df1b4bb104ceeaccdd7325b856) <br>
 
 
 Please download the following command line software:
@@ -77,6 +77,7 @@ install.packages()
 [ape](https://cran.r-project.org/web/packages/ape/index.html) <br>
 [seqinr](https://cran.r-project.org/web/packages/seqinr/index.html) <br>
 [devtools](https://cran.r-project.org/web/packages/devtools/index.html)<br>
+[ggplot2](https://ggplot2.tidyverse.org)<br>
 
 These programs require 'devtools' to be installed prior to installation:
 
