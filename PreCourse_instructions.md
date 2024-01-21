@@ -44,7 +44,7 @@ If you are using Mac OS or Ubuntu, you can run these programs through the Termin
 
 [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) <br>
 
-Also, some of these software can be easily installed using package management tools such as [homebrew]() for mac or [apt]() for Linux/Windows.
+Also, some of these software can be easily installed using package management tools such as [homebrew](https://brew.sh) for mac or [apt](https://ubuntu.com/server/docs/package-management) for Linux/Windows (Windows 10+).
 
 For example, with homebrew on mac, you can simply enter the following command into your terminal to install SAMtools on your system:
 
