@@ -8,7 +8,7 @@ Please following these instructions to download all programs and data for the co
 
 Please download all data required for this course by clicking the following link (Note, the file size is ~ MB):
 
-[Download Data](https://drive.google.com/drive/folders/1w3WG0jCj9BfB6aMB2Kq7vC2Yfx1ck6NB?usp=share_link)
+[Download Data]()
 <br>
 <br>
 
