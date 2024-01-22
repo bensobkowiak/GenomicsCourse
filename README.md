@@ -37,4 +37,4 @@ Please click the link below for instructions to download and install all data an
 | Friday 9th February <br> 9am – 1pm  | [Practical session: Self-guided practical](Practicals/Full_pipeline_test.md) | • Applying the skills learned to a novel dataset<br>• From raw sequence data to phylogenetic and phylodynamic analysis |
 
 
-Author: Ben Sobkowiak [b.sobkowiak.12](mailto:b.sobkowiak.12@ucl.ac.uk)
+Author: Ben Sobkowiak [Email](mailto:b.sobkowiak.12@ucl.ac.uk)
