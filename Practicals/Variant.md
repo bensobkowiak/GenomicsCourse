@@ -137,7 +137,7 @@ As you can see, viewing the VCF file in a text editor isn't very useful. So we c
 
 3. Open R (or R Studio) and following the following script:
 
-[Explore VCF files in R](ViewVCF.html)
+[Explore VCF files in R](Practicals/ViewVCF.html)
 
 
 
