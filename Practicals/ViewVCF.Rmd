@@ -1,0 +1,69 @@
+---
+title: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+4. Read the VCF file in to R as a table. 
+
+```{r}
+vcf<-read.table(file = "SNPs_filtered.vcf") # Read vcf file
+head(vcf)
+```
+
+
+<br>
+
+5. Opening the VCF as a table in this will cut the header of the VCF (any line with a # at the beginning) and open the file from line 39 onwards. We can open the full file complete with header to extract the column names at line 45:
+
+```{r}
+vcf_header<-as.matrix(read.table("SNPs_filtered.vcf",comment.char=" ",sep="\n"))
+column_names<-unlist(strsplit(vcf_header[45],"\t"))
+colnames(vcf)<-column_names
+head(vcf)
+```
+
+- In all VCF files, the number of columns will be 9 + the number of samples. In our case it will be 9 + 3 samples, so 12 columns total.
+
+- The 9 columns before the sample columns represent the following fields each variant (row):
+
+| Field   | Description                                                                                                   |
+|---------|---------------------------------------------------------------------------------------------------------------|
+| #CHROM  | Chromosome or genome name.                                                                                    |
+| #POS    | The position in the reference sequence.                                                           |
+| #ID     | Semi-colon separated list of SNP identifiers if the site is found in a database.                              |
+| #REF    | Reference nucleotide base (SNP) or sequence (INDEL).                                                         |
+| #ALT    | Alternative nucleotide base (SNP) or sequence (INDEL). Where multiple alleles are present, these are separated by a comma.                                                       |
+| #QUAL   | Total quality score for the site.                                                                            |
+| #FILTER | The filter flags used in the VariantFiltration step, if all thresholds are met this will show "PASS"                         |
+| #INFO   | Semi-colon separated site information, including total depth, allele count, etc. as a total of all samples.                             |
+| #FORMAT | Format of the variant call field for each sample column.                                                      |
+
+The "FORMAT" field is important as it shows the format of the code used to determine the variant call for each sample at each position (row). This code is a semi-colon separated string separating the flags (there can be other flags can be added):
+
+<br>
+
+In our VCF file, for "FORMAT" is **GT:PL:DP:AD**, which corresponds to:
+
+| Flag | Description                                                                                            |
+|-------|--------------------------------------------------------------------------------------------------------|
+| GT    | The genotype call: <br> `./.` = no call (likely to aligned sequence at this site) <br> `0/0` = reference call (column 4) <br> `1/1 or 1\|1 (or 2/2 or 2\|2 etc. if multiple alternative alleles present)` = alternative call (column 5) <br> `0/1 or 0\|1 (or 0/2, 1/2, 0|\3 etc.)` = a mix of reference and alternative call. <br> Note: If you call the sample as haploid, you will only get 0 or 1 genotype calls. |
+| PL    | The phred-scaled (quality) genotype likelihood, separated by a comma for reference call, mixed call, or alternative call. 0 is most likely, 255 least likely. |
+| DP    | Total read depth at the site.                                                                         |
+| AD    | Comma-separated read depth per reference and alternative(s) base calls.                  |
+
+*Note: the genotype call will be separated by a slash "/" or a pipe "|" depending on whether or not it is phased (indicating which chromosome the alleles are on). This is important in diploid organisms but for haploid, we can treat the calls as the same.
+
+
+<br>
+
+6. Let's just view the sample columns with the reference and alternative allele calls:
+
+```{r}
+head(vcf[,c(4,5,10:12)])
+```
