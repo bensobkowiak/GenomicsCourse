@@ -139,7 +139,7 @@ As you can see, viewing the VCF file in a text editor isn't very useful. So we c
 
 **_Exercise: Identify some potential SNPs or mixed sites in ERR221611 that are not present in the other samples. Which nucleotide would be present in each isolates?_**
 
-[Explore VCF files in R](Practicals/ViewVCF.html)
+[Explore VCF files in R](ViewVCF.html)
 
 
 
