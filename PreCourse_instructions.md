@@ -11,7 +11,7 @@ Please download all data required for this course by clicking the following link
 [Download Data]()
 <br>
 
-Please download all data into the same folder and make a note of the filepath for carrying out the practicals.
+Please download all data into the same folder and make a note of the filepath for carrying out the practicals. These files may change before the start of the workshop but please check on Friday 2nd February for the final data.
 
 <br>
 
