@@ -2,17 +2,14 @@
 
 ## Pre-course Instructions
 
-Please following these instructions to download all programs and data for the course. You will require sufficient space to install all programs and data (~2.5 GB).
+Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
 
 ### Data 
 
-Please download all data required for this course by clicking the following link (Note, the files in the folder will total ~2 GB):
+Please download all data required for this course by clicking the following link (Note, the file size is ~ MB):
 
 [Download Data](https://drive.google.com/drive/folders/1w3WG0jCj9BfB6aMB2Kq7vC2Yfx1ck6NB?usp=share_link)
 <br>
-
-Please download all data into the same folder and make a note of the filepath for carrying out the practicals. These files may change before the start of the workshop but please check on Friday 2nd February for the final data.
-
 <br>
 
 ### Programs and software
@@ -47,16 +44,16 @@ If you are using Mac OS or Ubuntu, you can run these programs through the Termin
 
 [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) <br>
 
-Also, some of these software can be easily installed using package management tools such as [homebrew](https://brew.sh) for mac or [apt](https://ubuntu.com/server/docs/package-management) for Linux/Windows (Windows 10+).
+Also, some of these software can be easily installed using package management tools such as [homebrew]() for mac or [apt]() for Linux/Windows.
 
 For example, with homebrew on mac, you can simply enter the following command into your terminal to install SAMtools on your system:
 
 ```bash
 brew install samtools
 ```
-Alternatively, here is a guide to install SAMtools/BCFtools on Ubuntu:
+Alternatively, here is a guide to install SAMtools using apt on Ubuntu:
 
-[Install SAMtools](https://gist.github.com/adefelicibus/f6fd06df1b4bb104ceeaccdd7325b856) <br>
+[Install SAMtools](https://bioinformaticsreview.com/20210404/installing-samtools-on-ubuntu/) <br>
 
 
 Please download the following command line software:
@@ -80,15 +77,23 @@ install.packages()
 [ape](https://cran.r-project.org/web/packages/ape/index.html) <br>
 [seqinr](https://cran.r-project.org/web/packages/seqinr/index.html) <br>
 [devtools](https://cran.r-project.org/web/packages/devtools/index.html)<br>
-[ggplot2](https://ggplot2.tidyverse.org)<br>
+[phytools](https://cran.r-project.org/web/packages/phytools/index.html) <br>
+[phylotools](https://cran.r-project.org/web/packages/phylotools/index.html) <br>
+[ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html) <br>
+[alluvial](https://cran.r-project.org/web/packages/ggalluvial/readme/README.html)<br>
 
-These programs require 'devtools' to be installed prior to installation:
+
+These programs need to be installed through the 'devtools' install_github() function:
 
 [BactDating](https://github.com/xavierdidelot/BactDating) <br>
 [TreeWas](https://github.com/caitiecollins/treeWAS) <br>
 <br>
 
+
 ### Please attempt to download all data and software. If you have any issues, please get in [contact](mailto:benjamin_sobkowiak@sfu.ca).
 
 Click [here](README.md) to return to the course homepage.
+
+
+
 
