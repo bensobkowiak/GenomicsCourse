@@ -58,7 +58,7 @@ Alternatively, here is a guide to install SAMtools using apt on Ubuntu:
 
 Please download the following command line software:
 
-[Trimmomatic](https://github.com/usadellab/Trimmomatic/releases/tag/v0.39) <br>
+[Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) <br>
 [Burrow-Wheeler Aligner (BWA)](https://github.com/lh3/bwa) <br>
 [SAMtools/BCFtools](http://www.htslib.org) <br>
 [GATK](https://github.com/broadinstitute/gatk/releases) <br>
