@@ -36,7 +36,7 @@ AliView (optional) <br>
 <br>
 [3. Align consensus sequences](Align_consensus.md)<br>
 <br>
-[4. Maximum Likelihood phylogenetic trees](MLtrees.md)<br>
+[4. Maximum Likelihood phylogenetic trees](ML_trees.md)<br>
 
 
 Background
