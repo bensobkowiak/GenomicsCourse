@@ -81,5 +81,5 @@ Please work together if needed and if you get stuck, there is a solution [here](
 9. Finally, view your aligned and masked sequence file by opening with AliView.
 
 
-Next activity: [Maximum Likelihood phylogenetic trees](MLtrees.md)
+Next activity: [Maximum Likelihood phylogenetic trees](ML_trees.md)
 
