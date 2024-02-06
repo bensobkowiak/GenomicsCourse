@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-4. Read the VCF file in to R as a table. 
+**4. Read the VCF file in to R as a table.**
 
 ```{r}
 vcf<-read.table(file = "SNPs_filtered.vcf") # Read vcf file
@@ -19,7 +19,7 @@ head(vcf)
 
 <br>
 
-5. Opening the VCF as a table in this will cut the header of the VCF (any line with a # at the beginning) and open the file from line 39 onwards. We can open the full file complete with header to extract the column names at line 45:
+**5. Opening the VCF as a table in this will cut the header of the VCF (any line with a # at the beginning) and open the file from line 39 onwards. We can open the full file complete with header to extract the column names at line 45:**
 
 ```{r}
 vcf_header<-as.matrix(read.table("SNPs_filtered.vcf",comment.char=" ",sep="\n"))
@@ -62,7 +62,7 @@ In our VCF file, for "FORMAT" is **GT:PL:DP:AD**, which corresponds to:
 
 <br>
 
-6. Let's just view the sample columns with the reference and alternative allele calls:
+**6. Let's just view the sample columns with the reference and alternative allele calls:**
 
 ```{r}
 head(vcf[,c(4,5,10:12)])
