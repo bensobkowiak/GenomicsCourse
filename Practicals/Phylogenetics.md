@@ -25,7 +25,7 @@ FigTree <br>
 
 [1. Maximum likelihood timed trees with TreeTime](TreeTime.md)<br>
 <br>
-[2. Two-step Bayesian timed trees with BactDating](BactDating.md)<br>
+[2. Two-step Bayesian timed trees with BactDating](BactDating.html)<br>
 <br>
 [3. Bayesian reconstruction of timed trees with BEAST2](Beast.md)<br>
 <br>
