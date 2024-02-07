@@ -28,7 +28,7 @@ All the programming tasks in the course will be carried out with either R or on 
 
 [R Studio](https://posit.co/download/rstudio-desktop/) (This is optional but will provide a good interface for R)<br>
 [BEAST2](https://www.beast2.org) (This will install the three programs we will use in this course, BEAUti, BEAST and TreeAnnotator) <br>
-[Tracer](http://tree.bio.ed.ac.uk/software/tracer/)<br>
+[Tracer](https://github.com/beast-dev/tracer/releases/tag/v1.7.2)<br>
 [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)<br>
 Any Extended Text Viewer (e.g., [BBEdit](https://www.barebones.com/products/bbedit/) for mac, [Sublime Text](https://www.sublimetext.com) for all systems) <br>
 [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)<br>
