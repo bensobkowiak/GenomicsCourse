@@ -1,0 +1,91 @@
+---
+title: "Genome Wide Association Studies with treeWAS"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+Genome Wide Association Studies (GWAS) can be used to find significant genomic associations with a given trait or characteristic (phenotype). We can analyze the entire genome of individuals to pinpoint single nucleotide polymorphisms (SNPs) or other genetic markers (e.g., the presence or absence of a gene) that exhibit statistical associations with particular phenotypes. A key consideration when running a GWAS is to control for population structure as this may induce false positive calls in where variants are identified due to shared ancestry rather than because of the trait of interest.
+
+[treeWAS](<https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/30184106/>) is a package available in R that has been specifically developed to run bacterial GWAS. This method can be very powerful for identifying SNPs in bacterial genomics that are significantly associated with a given phenotype. This phenotype can be a binary or continuous variable. 
+
+This practical will guide you through running treeWAS to perform a GWAS using the 200 _M. tuberculosis_ samples from Moldova from previous exercises.
+
+<br>
+
+#### 1. First we will set up the packages and options:
+
+```{r}
+# Set packages and download treeWAS
+require(devtools)
+#install_github("caitiecollins/treeWAS", build_vignettes = TRUE)
+require(treeWAS)
+options(stringsAsFactors = F)
+```
+
+<br>
+
+#### 2. To run a GWAS with treeWAS, you will need a genotype (sequence) file, a phenotype file, and a phylogeny. First we will first load the tree file. This will be the un-timed ML phylogeny "TB_Moldova.tree":
+
+```{r}
+tree <- ape::read.tree("TB_Moldova.tree") 
+```
+
+<br>
+
+#### 3. Next load in the genotype file in DNAbin format of from 'ape'. This will be the multi-sequence FASTA file. We need to convert this to a specific format for treeWAS using the 'DNAbin2genind' function:
+
+```{r}
+dna <- read.dna(file = "TB_Moldova.fasta", format = "fasta")
+genotype <- DNAbin2genind(dna)@tab
+```
+
+<br>
+
+#### 4. We will use the phenotype found in the third column of the "TB_Moldova_metadata.csv" file you have been provided with. This will be converted to a named vector using the sequence names. This is a binary variable, with 1 = presence of phenotype, 0 = absence of phenotype.
+
+```{r}
+phenotype <- read.csv(file= "TB_Moldova_metadata.csv")
+phen <- as.vector(unlist(phenotype[,3])) # The 
+names(phen) <- phenotype[,1]
+```
+
+<br>
+
+#### 4. The final step is to run treeWAS, we can also set a random seed to replicate the result. 
+
+You will get 7 plots automatically after the run completes. There will be one plot with the input tree with tips coloured by the phenotype, and 6 results plots. These will be a manhatten plot and a bar graph for each of three statistical measures to determine signficant associations, with a red line illustrating the cutoff for significance with bonferroni correction.
+
+1. the “Terminal Score”, measures sample-wide association across the leaves ofthe phylogenetic tree.
+2. the “Simultaneous Score”, measures the degree of parallel change in the phenotype
+and genotype across branches of the tree. 
+3. the “Subsequent Score”, measures the proportion ofthe tree in which the genotype
+and phenotype co-exist.
+
+
+```{r}
+out <- treeWAS(snps = genotype,
+               phen = phen,
+               tree = tree,
+               seed = 2345)
+```
+
+<br>
+
+#### The results will show you the coordinates in the genotype file that have been found to be significantly associated with the phenotype.
+
+<br>
+
+#### Exercise: You have been provided with an index file "TB_Moldova_index.txt" which will enable you to link the coordinates in the genotype file to their position in the TB H37Rv reference strain. Find the genes that harbour the significant SNPs, what do you think the phenotype is in our analysis?
+
+*Tip: Go back to the NCBI tutorial on the first day to see how to view reference strains.*
+
+
+### This is the end of practical 4. Navigate back to the homepage [here]()
+
+<br>
+
+

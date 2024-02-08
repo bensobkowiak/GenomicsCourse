@@ -1,0 +1,129 @@
+---
+title: "Identifying sites under selection"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We can identify sites that may be under selection by looking for homoplasies across our phylogenetic tree. Homoplasies are instances where mutations have evolved independently across different lineages due to natural selection. This can be accomplished using various computational methods and statistical tests designed to detect signatures of positive selection acting on specific sites in a phylogenetic context.
+
+There are various ways to carry out this analysis but here we will use a program called [HomoplasyFinder](https://github.com/JosephCrispell/homoplasyFinder/tree/master) to identify sites that are inconsistent with the phylogeny and then plot highly discrepant sites on tree.
+
+We will use data from 200 *Mycobacterium tuberculosis* samples that were collected in Moldova between 2018 and 2019. We have provided you with the following files:
+
+-   TB_Moldova.fasta - a multi-sequence SNP alignment file
+-   TB_Moldova.tree - a Maximum Likelihood phylogenetic tree produced from the sequence data
+-   TB_Moldova_index.txt - a text file indexing the SNPs in the sequence file to the true position in the H37Rv reference strain
+
+<br>
+
+#### 1. First we will set up the packages and options:
+
+```{r}
+# Set packages and options
+if (!requireNamespace("rJava", quietly = TRUE)) {
+install.packages("rJava", type = "binary")
+}
+library(rJava)
+
+devtools::install_github("JosephCrispell/homoplasyFinder")
+library(homoplasyFinder)
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+install.packages("ggplot2")
+}
+library(ggplot2)
+if (!requireNamespace("ggtree", quietly = TRUE)) {
+install.packages("ggtree")
+}
+library(ggtree)
+options(stringsAsFactors = F)
+```
+
+<br>
+
+#### 2. Next we will set the file names for the sequence data and Maximum Likelihood phylogenetic tree of 200 *M. tuberculosis* isolates collected between 2018 and 2019 in Moldova.
+
+```{r}
+fastaFile <- "TB_Moldova.fasta"
+treeFile <- "TB_Moldova.tree"
+```
+
+<br>
+
+#### 3. Then we can simply run HomoplasyFinder using the following command. This will detect all sites in the fasta file that are found to arise independently in more than one place in the tree.
+
+```{r}
+inconsistentPositions <- runHomoplasyFinderInJava(treeFile=treeFile, 
+                                                  fastaFile=fastaFile, 
+                                                  path="")
+```
+
+<br>
+
+#### 4. HomoplasyFinder will write 3 files to your directory. We are interested in the file that contains the positions in which there is evidence of homoplasy. We will read this file and call it 'results'.
+
+```{r}
+resultsFile <- paste0("consistencyIndexReport_", format(Sys.Date(), "%d-%m-%y"), ".txt")
+results <- read.table(resultsFile, header=TRUE, sep="\t", stringsAsFactors=FALSE)
+```
+
+<br>
+
+#### 5. Let's view the results. We have 4 columns, the first is the position in our sequence file, the second is an index that measures the degree of homoplasy, and third is a count of the nucleotides at that position across all samples. Importantly the fourth column shows us the number of times a change in nucleotide has occurred across the tree. A high number is evidence of homoplasy.
+
+```{r}
+head(results)
+```
+
+<br>
+
+#### 6. We can filter for only positions in which changes to the nucleotide (mutation) has occurred a large number of times across the tree.
+
+```{r}
+results <- results[which(results$MinimumNumberChangesOnTree>10),]
+```
+
+<br>
+
+#### 7. View the new results. We are left with two sites.
+
+```{r}
+head(results)
+```
+
+<br>
+
+#### 8. We can plot the tree with the nucleotide found in each tip (sequence) to see how these mutations look across our phylogeny. We will do this one at a time for illustrative purposes. We will start with the first site:
+
+```{r}
+fasta<-seqinr::read.fasta("TB_Moldova.fasta",forceDNAtolower = F) # Read fasta
+tree<-read.tree("TB_Moldova.tree") # Read the phylogeny
+
+## Make a matrix of the sequences
+Seq_df<-as.data.frame(matrix(as.character(unlist(fasta)),nrow=length(fasta),byrow = T))
+
+## Extract the site that you want to plot to a vector and name it by the sequence name
+site<-Seq_df[,6028]
+names(site)<-names(fasta)
+
+## pick a colour for each nucleotide and change the vector to the colour
+site[which(site=="c")]<-"lightblue"
+site[which(site=="g")]<-"red"
+
+## Reorder the site vector to match the order of sequences on the tree
+site<-site[order(match(names(site),tree$tip.label))]
+
+## plot the tree with the sites coloured at the tips.
+ggtree(tree) + geom_tippoint(color=site)
+```
+
+<br>
+
+
+#### Exercise: Open the index file provided ("TB_Cluster_index.txt"). Find out the true positions of the high likelihood convergent SNPs. Search the internet for results and try to work out what these mutations are. What characteristic do you think the isolates carry these mutations have?
+
+### Next activity: [GWAS](https://bensobkowiak.github.io/GenomicsCourse/Practicals/GWAS.html)
+
+<br>
