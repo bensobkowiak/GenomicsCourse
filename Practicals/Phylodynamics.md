@@ -28,7 +28,7 @@ Tracer <br>
 <br>
 [2. Phylogeography using ancestral state reconstruction](Ancestral_reconstruction.html)<br>
 <br>
-[3. Testing for selection](Selection.html)<br>
+[3. Testing for selection](Homoplasy.html)<br>
 <br>
 [4. Genome Wide Association Studies](GWAS.html)<br>
 <br>
