@@ -1,6 +1,5 @@
 # Genomic Analysis and Phylodynamics Workshop
 
-## 5th - 9th February 2024, Simon Fraser University
 
 ### View on [GitHub](https://github.com/bensobkowiak/GenomicsCourse/)
 
