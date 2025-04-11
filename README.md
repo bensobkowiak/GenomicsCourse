@@ -1,9 +1,6 @@
-# Genomic Analysis and Phylodynamics Workshop - NTU 2025
+# Genomic Analysis and Phylodynamics Workshop 
+## National Taiwan University 2025
 
-
-
-### View on [GitHub](https://github.com/bensobkowiak/GenomicsCourse/)
----
 
 ![Title Image](Sequence_trees.png)
 
@@ -65,5 +62,7 @@ Please click the link below for instructions to download and install all data an
 | 12:00–12:30  | **Lecture 5: Closing lecture** | • Course summary and feedback collection |
 
 
+
+### View on [GitHub](https://github.com/bensobkowiak/GenomicsCourse/)
 
 Author: Ben Sobkowiak [Email](mailto:b.sobkowiak.12@ucl.ac.uk)
