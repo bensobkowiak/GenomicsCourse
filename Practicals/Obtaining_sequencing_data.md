@@ -44,11 +44,49 @@ Here we will go through how to download a complete assembly in the FASTA format,
 
 This will download the full sequence in the FASTA format.
 
-<br>
+
 
 #### NCBI SRA - downloading raw sequencing data
 
-Newly sequenced genomic data that is being reported in a publication will be submitted to SRA (or ENA below) and you can find the corresponding project ID number in the paper (often in a "Data availability" section). There will be a number like "Project ID ERP000436". You can download directly from the website, or use the SRA-toolkit to download many sequences. A good tutoiral for this is found [here]((https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit).
+Newly sequenced genomic data that is being reported in a publication will be submitted to SRA (or ENA below) and you can find the corresponding project ID number in the paper (often in a "Data availability" section). There will be a number like "Project ID ERP000436". You can download directly from the website, or use the SRA-toolkit to download many sequences. A good tutorial for using the SRA-toolkit is found [here]((https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit).
+
+Here we will download raw sequencing data directly from NCBI SRA:
+
+1. Navigate back to the [NCBI homepage](https://www.ncbi.nlm.nih.gov). 
+
+2. Select "SRA" from the dropdown box.
+
+    <img src="Pictures/SRA1.png" alt="Description1" width="70%"/>
+
+
+3. Type in the project ID (you can also search for specific sequence accessions or even a general search term such as _Mycobacterium tuberculosis_). Here we will search for the project ID ERP000436.
+
+    <img src="Pictures/SRA2.png" alt="Description1" width="70%"/>
+
+
+4. This will pull up all the sequences associated with this project ID. You can search through these individually to look at the data associated with each sequence. To download the sequencing data we will select the "send results to Run selector" button. 
+
+    <img src="Pictures/SRA3.png" alt="Description1" width="70%"/>
+
+
+5. This will send you to the 'SRA Run Selector' page, which contains information about the project and the sequences contained within. Here we can see we have 358 runs (samples) that totals 208.58GB of data.
+
+    <img src="Pictures/SRA4.png" alt="Description1" width="70%"/>
+
+6. If you scroll down you will see each sample with the run accession number and all other associated metadata. We can select the first one in this list:
+
+    <img src="Pictures/SRA5.png" alt="Description1" width="70%"/>
+
+7. This will take us to the sample page. If we click the "FASTA/FASTQ Download" button, this is where we can obtain the sequence data files:
+
+    <img src="Pictures/SRA6.png" alt="Description1" width="70%"/>
+
+8. We want the raw sequence data for this sample in the FASTQ format, so we can select the "FASTQ" button. This will automatically start a download of the data.
+9. 
+     <img src="Pictures/SRA7.png" alt="Description1" width="70%"/>
+
+It is important to note that downloading the data from SRA will result in a single FASTQ file, even if the data are paired data that should be separated into 2 files (forward and reverse reads). To obtain the split FASTQ files, you will need to use the SRA-toolkit as descibed above, or download the data from ENA, as per the following exercise.
+
 
 <br>
 
