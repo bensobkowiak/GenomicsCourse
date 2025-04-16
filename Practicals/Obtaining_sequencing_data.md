@@ -4,11 +4,59 @@ While you will be provided with all the data you need for this course, normally 
 
 For the first activity, we will introduce three of these databases and take you through how to search for and download sequences. The location and format of the sequence data will depend on the taxa of interest and whether you require the raw sequence data or partially or fully assembled sequences. 
 
+### [National Center for Biotechnology Information (NCBI)](https://www.ncbi.nlm.nih.gov)
+
+NCBI provides access to a wide range of databases and tools, including the GenBank nucleotide database and SRA, the Sequence Read Archive. Genbank is great resource for accessing curated and well-characterized reference strains, providing a standardized basis for comparison and analysis across experiments, along with providing links to raw sequence data found in ENA. Most commonly used reference sequences will be referenced in publications with a GenBank accession number (e.g., NC_000962.3 for the _Mycobacterium tuberculosis_ H37Rv reference strain.
+
+Here we will go through how to download a complete assembly in the FASTA format, such as a reference strain:
+
+#### NCBI Genbank - downloading complete assemblies
+
+1. Click the link to NCBI above.
+
+2. You will be sent to a page (below): 
+
+    <img src="Pictures/NCBI_1.jpeg" alt="Description1" width="70%"/>
+
+<br>
+
+3. Type "NC_000962_3" into the search bar. This is the accession number of H37Rv.
+
+    <img src="Pictures/NCBI_2.jpeg" alt="Description1" width="70%"/>
+
+<br>
+
+4. This will bring up the following result, click on the name 'Mycobacterium tuberculosis H37Rv, complete genome':
+
+    <img src="Pictures/NCBI_3.jpeg" alt="Description1" width="70%"/>
+
+<br>
+
+5. You will be directed to the result page for that genome:
+
+    <img src="Pictures/NCBI_4.jpeg" alt="Description1" width="70%"/>
+
+<br>
+
+6. To download the complete genome in a FASTA format file (a simple text-based format for representing nucleotide sequences), click "send to", choose "Complete record", "Choose Destination - File", and "FASTA" in the "format" dropdown menu. Then click "Create File"
+
+    <img src="Pictures/NCBI_5.jpeg" alt="Description1" width="70%"/>
+
+This will download the full sequence in the FASTA format.
+
+<br>
+
+#### NCBI SRA - downloading raw sequencing data
+
+Newly sequenced genomic data that is being reported in a publication will be submitted to SRA (or ENA below) and you can find the corresponding project ID number in the paper (often in a "Data availability" section). There will be a number like "Project ID ERP000436". You can download directly from the website, or use the SRA-toolkit to download many sequences. A good tutoiral for this is found [here]((https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit).
+
+<br>
+
 ### [European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena/browser/search)
 
-This online database is a good resource for obtaining raw sequencing data but it also contains sequence assemblies and functional annotation. 
+This online database is another good resource for obtaining raw sequencing data but it also contains sequence assemblies and functional annotation. Sequences submitted to SRA will also be (and vice versa). Downloading data directly from ENA can be faster than SRA and 
 
-Often, newly sequenced genomic data that is being reported in a publication will be submitted to ENA and you can find the corresponding project ID number in the paper (often in a "Data availability" section). There will be a number like "Project ID ERP000436".
+Here we will search for sequences in Project ID ERP000436 in ENA:
 
 1. Click the link to ENA above.
 
@@ -54,49 +102,8 @@ This command will just download the two paired-end FASTQ files shown from projec
 wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR036/ERR036185/ERR036185_1.fastq.gz
 wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR036/ERR036185/ERR036185_2.fastq.gz
 ```
-
-
 <br>
 
-### [National Center for Biotechnology Information (NCBI)](https://www.ncbi.nlm.nih.gov)
-
-NCBI provides access to a wide range of databases and tools, including the GenBank nucleotide database. This is a great resource for accessing curated and well-characterized reference strains, providing a standardized basis for comparison and analysis across experiments. Most commonly used reference sequences will be referenced in publications with a GenBank accession number (e.g., NC_000962.3 for the _Mycobacterium tuberculosis_ H37Rv reference strain.
-
-1. Click the link to NCBI above.
-
-2. You will be sent to a page (below): 
-
-    <img src="Pictures/NCBI_1.jpeg" alt="Description1" width="70%"/>
-
-<br>
-
-3. Type "NC_000962_3" into the search bar. This is the accession number of H37Rv.
-
-    <img src="Pictures/NCBI_2.jpeg" alt="Description1" width="70%"/>
-
-<br>
-
-4. This will bring up the following result, click on the name 'Mycobacterium tuberculosis H37Rv, complete genome':
-
-    <img src="Pictures/NCBI_3.jpeg" alt="Description1" width="70%"/>
-
-<br>
-
-5. You will be directed to the result page for that genome:
-
-    <img src="Pictures/NCBI_4.jpeg" alt="Description1" width="70%"/>
-
-<br>
-
-6. To download the complete genome in a FASTA format file (a simple text-based format for representing nucleotide sequences), click "send to", choose "Complete record", "Choose Destination - File", and "FASTA" in the "format" dropdown menu. Then click "Create File"
-
-    <img src="Pictures/NCBI_5.jpeg" alt="Description1" width="70%"/>
-
-This will download the full sequence.
-
-<br>
-
-<br>
 
 ### [Global Initiative on Sharing All Influenza Data (GISAID)](https://gisaid.org)
 
