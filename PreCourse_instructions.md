@@ -55,7 +55,6 @@ Alternatively, here is a guide to install SAMtools using apt on Ubuntu:
 
 [Install SAMtools](https://bioinformaticsreview.com/20210404/installing-samtools-on-ubuntu/) <br>
 
-
 Please download the following command line software:
 
 [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) <br>
@@ -65,6 +64,8 @@ Please download the following command line software:
 [mafft](https://mafft.cbrc.jp/alignment/software/) <br>
 [IQtree](http://www.iqtree.org) <br>
 [TreeTime](https://github.com/neherlab/treetime) <br>
+[FastANI](https://github.com/ParBLiSS/FastANI) <br>
+
 <br>
 
 #### R programs
@@ -87,6 +88,7 @@ These programs need to be installed through the 'devtools' install_github() func
 
 [BactDating](https://github.com/xavierdidelot/BactDating) <br>
 [TreeWas](https://github.com/caitiecollins/treeWAS) <br>
+[TransPhylo](https://github.com/xavierdidelot/TransPhylo/) <br>
 <br>
 
 
