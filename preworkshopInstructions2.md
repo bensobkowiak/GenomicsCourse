@@ -4,11 +4,11 @@
 
 Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
 
-### Data 
+### Data and Scripts
 
 Please download all data and scripts required for this course by clicking the following link (Note, the file size is ~ MB) and saving all the data and scripts contained in a folder on your computer.
 
-[Download Data adn Scripts](https://drive.google.com/drive/folders/1w3WG0jCj9BfB6aMB2Kq7vC2Yfx1ck6NB?usp=share_link)
+[Download Data and Scripts](https://drive.google.com/drive/folders/1w3WG0jCj9BfB6aMB2Kq7vC2Yfx1ck6NB?usp=share_link)
 <br>
 
 ### Programs and software
