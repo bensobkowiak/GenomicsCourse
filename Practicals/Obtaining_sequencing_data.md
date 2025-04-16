@@ -109,8 +109,6 @@ wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR036/ERR036185/ERR036185_2.fastq.g
 
 The Global Initiative on Sharing All Influenza Data (GISAID) facilitates the open sharing of genetic and clinical data related to influenza and other emerging viruses. Recently, ithas played a pivotal role in the global response to the COVID-19 pandemic by serving as a key platform for sharing genomic data related to SARS-CoV-2.
 
-_Note: _
-
 1. Click the link to GISAID above. You will be directed to the following page:
    
     <img src="Pictures/GISAID1.jpeg" alt="Description1" width="70%"/>
@@ -129,40 +127,40 @@ _Note: _
 
 <br>
 
-4. You will be directed here. As you can see there are over 16 million sequences that have been submitted:
+4. You will be directed here. As you can see there are over 17 million sequences that have been submitted:
    
-    <img src="Pictures/GISAID4.jpeg" alt="Description1" width="70%"/>
+    <img src="Pictures/GISAID4.png" alt="Description1" width="70%"/>
 
 <br>
 
-5. We can choose which sequences to download using the options in the boxes on the page, including filtering by location and lineage. Let's type "Canada" into the "Location" box:
+5. We can choose which sequences to download using the options in the boxes on the page, including filtering by location and lineage. Let's type "Taiwan" into the "Location" box:
    
-    <img src="Pictures/GISAID5.jpeg" alt="Description1" width="70%"/>
+    <img src="Pictures/GISAID5.png" alt="Description1" width="70%"/>
 
 <br>
 
-6. There are over 608,000 SARS-CoV-2 sequences from Canada that have been deposited. We can further filter the data by variant. Lets type "P.1" into the "Lineage" box:
+6. There are over 6,000 SARS-CoV-2 sequences from Taiwan that have been deposited. We can further filter the data by variant. Lets type "B.1.1.7" into the "Lineage" box:
    
-    <img src="Pictures/GISAID6.jpeg" alt="Description1" width="70%"/>
+    <img src="Pictures/GISAID6.png" alt="Description1" width="70%"/>
 
 <br>
 
-7. This takes us to around 400 SARS-CoV-2 P.1 sequences from Canada that have been deposited on GISAID. We can also filter to only include complete, high coverage geomes with a complete collection date by selecting the boxes on the right:
+7. This takes us to 251 SARS-CoV-2 B.1.1.7 sequences from Taiwan that have been deposited on GISAID. We can also filter to only include complete, high coverage geomes with a complete collection date by selecting the boxes on the right:
    
-    <img src="Pictures/GISAID7.jpeg" alt="Description1" width="70%"/>
+    <img src="Pictures/GISAID7.png" alt="Description1" width="70%"/>
 
 <br>
 
 
-8. Now we have 202 sequences. Let's download these by selecting all by ticking the box highlighted in red, and clicking "Download" at the bottom right:
+8. Now we have 246 sequences. Let's download these by selecting all by ticking the box above the sequences on the left, and clicking "Download" at the bottom right:
    
-    <img src="Pictures/GISAID8.jpeg" alt="Description1" width="70%"/>
+    <img src="Pictures/GISAID8.png" alt="Description1" width="70%"/>
 
 <br>
 
 9. This will now give you the option of which data to download. For the sequence data select "Nucleotide Sequences (FASTA)". Another important dataset is the "Patient status metadata", which will download all metadata associated with the sequences such as collection dates.
    
-    <img src="Pictures/GISAID9.jpeg" alt="Description1" width="70%"/>
+    <img src="Pictures/GISAID9.png" alt="Description1" width="70%"/>
 
 <br>
 
