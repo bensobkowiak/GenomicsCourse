@@ -49,9 +49,9 @@ Following the link to download the scripts above, you should have downloaded thr
 
 1. Open your terminal again.
 
-2. Nativigate to the folder with the scripts in (change the /path/to/folder/ to the folder you have these stored in):
+2. Nativigate to the folder that you have downloaded the scripts and data into (e.g., /Users/yourname/Documents/workshop/):
    ```bash
-   cd /path/to/folder/
+   cd /Users/yourname/Documents/workshop/
    ```
 3. Run the following command:
    ```bash
@@ -69,52 +69,65 @@ To enter this conda environment, open your terminal, navigate to the folder with
 
 For windows users, it is a little more complicated to install miniconda. 
 
-1. Install WSL (Windows Subsystem for Linux)
+First, install WSL (Windows Subsystem for Linux)
 
-Open PowerShell as Administrator
-  Run the following command:
-  wsl --install
+1. Open PowerShell as Administrator (Type it in your 
+   Run the following command:
+   ```bash
+    wsl --install
+   ```
 
 This will:
-  Install WSL2
-  Install Ubuntu (default)
+
+  Install WSL2<br>
+  Install Ubuntu (default)<br>
   Set up necessary components
 
 When prompted, restart your computer
+
 2. Set up Ubuntu in WSL
 
-After reboot, Ubuntu will open automatically
-Wait for installation to complete
-Choose a username and password when prompted
-This opens a Linux terminal (Ubuntu shell)
+After reboot, Ubuntu will open automatically. Wait for installation to complete then choose a username and password when prompted. This opens a Linux terminal (Ubuntu shell).
+
 3. Install Miniconda inside WSL (Ubuntu)
 
 In the Ubuntu terminal, run the following:
+```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh
-Accept the license agreement
-Confirm the default install location (e.g., /home/yourname/miniconda3)
+```
+
+Accept the license agreement and confirm the default install location (e.g., /home/yourname/miniconda3)/
+
 When installation finishes, close and reopen the terminal or run:
+```bash
 source ~/.bashrc
+```
+
 Check that Conda is available:
+```bash
 conda --version
-4. Move Setup Scripts Into WSL
+```
 
-Place your files (setup_conda_workshop.sh, workshop_env.yml, install_r_github.R) in a folder on Windows (e.g., C:\Users\YourName\Documents\bioinfo_setup)
+4. Move Setup Scripts Into WSL. Place the files (Install_programs.sh, workshop_env.yml, install_r_github.R) in a folder on Windows (e.g., C:Users\yourname\Documents\workshop).
+
 In the Ubuntu terminal, navigate to that folder:
-cd /mnt/c/Users/YourName/Documents/bioinfo_setup
-5. Run the Workshop Setup Script
+```bash
+cd /mnt/c/Users/yourname/Documents/workshop/
+```
 
-From within that directory, run:
-bash setup_conda_workshop.sh
-This will:
-Create the Conda environment
-Install required packages
-Run the R setup script
-6. Activate the Environment (if needed)
+6. Run the following command:
 
-If you want to manually activate the environment later:
-conda activate bioinfo-workshop
+```bash
+bash Install_programs.sh
+```
+
+After around 5-10 minutes, you should now have a conda environment called 'bioinfo-workshop' and you can run all the analysis from here.
+
+To enter this conda environment, open your terminal, navigate to the folder with the data and scripts, and enter the following command:
+  ```bash
+  conda activate bioinfo-workshop
+  ```
 
 
 
