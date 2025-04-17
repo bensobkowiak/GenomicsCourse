@@ -129,6 +129,17 @@ To enter this conda environment, open your terminal, navigate to the folder with
   conda activate bioinfo-workshop
   ```
 
+7. Install these applications separately on windows
+
+These programs must be installed directly on Windows (not through WSL):
+
+[RStudio](https://posit.co/download/rstudio-desktop/)
+[BEAST2](https://www.beast2.org/)
+[Tracer](http://tree.bio.ed.ac.uk/software/tracer/)
+[FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
+[Tablet](https://ics.hutton.ac.uk/tablet/)
+[AliView](https://ormbunkar.se/aliview/)
+
 
 
 
