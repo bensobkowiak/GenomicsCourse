@@ -17,7 +17,7 @@ Please download all data and scripts required for this course by clicking the fo
 
 The easiest method for downloading all the software required for the workshop is to first download miniconda. 
 
-Mac users, please following these instructions:
+- Mac users, please following these instructions:
 
 1. Open the Terminal.
 
@@ -31,7 +31,7 @@ Mac users, please following these instructions:
   # Follow prompts, then restart terminal
   ```
 
-Linux users, please follow these instructions:
+- Linux users, please follow these instructions:
 
 1. Open the Terminal.
 
@@ -45,6 +45,8 @@ Linux users, please follow these instructions:
   # Follow prompts, then restart terminal
   ```
 
+- Both Mac and Linux users:
+  
 Following the link to download the scripts above, you should have downloaded three scripts - Install_programs.sh, workshop_env.yml, and install_r_github.R. These are the three scripts required to download all the programs required for the workshop.
 
 1. Open your terminal again.
@@ -133,16 +135,12 @@ To enter this conda environment, open your terminal, navigate to the folder with
 
 These programs must be installed directly on Windows (not through WSL):
 
-[RStudio](https://posit.co/download/rstudio-desktop/)
-[BEAST2](https://www.beast2.org/)
-[Tracer](http://tree.bio.ed.ac.uk/software/tracer/)
-[FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
-[Tablet](https://ics.hutton.ac.uk/tablet/)
-[AliView](https://ormbunkar.se/aliview/)
-
-
-
-
+[RStudio](https://posit.co/download/rstudio-desktop/)<br>
+[BEAST2](https://www.beast2.org/)<br>
+[Tracer](http://tree.bio.ed.ac.uk/software/tracer/)<br>
+[FigTree](http://tree.bio.ed.ac.uk/software/figtree/)<br>
+[Tablet](https://ics.hutton.ac.uk/tablet/)<br>
+[AliView](https://ormbunkar.se/aliview/)<br>
 
 <br>
 
