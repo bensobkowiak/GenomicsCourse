@@ -12,7 +12,7 @@
 
 Please click the link below for instructions to download and install all data and software required for this course:
 
-[Pre-course instructions](preworkshopinstructions2.md)
+[Pre-course instructions](preworkshopInstructions2.md)
 
 ---
 
