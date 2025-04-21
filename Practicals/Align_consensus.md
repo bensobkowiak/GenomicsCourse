@@ -12,14 +12,14 @@ The data we will use for this exercise are:
 
 <br>
 
-1. View the unaligned "Taiwan_B.117.fasta" file in AliView. It should look like this:
+1. View the unaligned "Taiwan_B117.fasta" file in AliView. It should look like this:
 
     <img src="Pictures/AliView.jpeg" alt="Description1" width="90%"/>
 
 2. Input the following command to align the sequences to the Wuhan-1 reference strain:
 
 ```bash
-mafft --auto --thread -2 --keeplength --preservecase --addfragments Taiwan_B.117.fasta Wuhan1.fasta > Taiwan_B117_aligned.fasta
+mafft --auto --thread -2 --keeplength --preservecase --addfragments Taiwan_B117.fasta Wuhan1.fasta > Taiwan_B117_aligned.fasta
 ```
 
 _This may take a few minutes to execute._
