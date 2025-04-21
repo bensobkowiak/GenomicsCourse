@@ -4,16 +4,16 @@
 
 Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
 
-### Data and Scripts
+## Data and Scripts
 
 Please download all data and scripts required for this course by clicking the following link (Note, the file size is ~ MB) and saving all the data and scripts contained in a folder on your computer.
 
 [Download Data and Scripts](https://drive.google.com/drive/folders/1w3WG0jCj9BfB6aMB2Kq7vC2Yfx1ck6NB?usp=share_link)
 <br>
+<br>
+## Programs and software
 
-### Programs and software
-
-#### Mac and Linux users
+### Mac and Linux users
 
 The easiest method for downloading all the software required for the workshop is to first download miniconda. 
 
@@ -23,13 +23,13 @@ The easiest method for downloading all the software required for the workshop is
 
 2. Enter the following code: 
 
-  ```bash
-  # Download and install Miniconda
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
-  bash ~/miniconda.sh -b -p $HOME/miniconda
+```bash
+# Download and install Miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
 
-  # Follow prompts, then restart terminal
-  ```
+# Follow prompts, then restart terminal
+```
 
 - Linux users, please follow these instructions:
 
@@ -37,13 +37,13 @@ The easiest method for downloading all the software required for the workshop is
 
 2. Enter the following code: 
 
-  ```bash
-  # Download and install Miniconda
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-  bash ~/miniconda.sh -b -p $HOME/miniconda
+```bash
+# Download and install Miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
 
-  # Follow prompts, then restart terminal
-  ```
+# Follow prompts, then restart terminal
+```
 
 - Both Mac and Linux users:
   
@@ -52,32 +52,31 @@ Following the link to download the scripts above, you should have downloaded thr
 1. Open your terminal again.
 
 2. Nativigate to the folder that you have downloaded the scripts and data into (e.g., /Users/yourname/Documents/workshop/):
-   ```bash
-   cd /Users/yourname/Documents/workshop/
-   ```
+```bash
+cd /Users/yourname/Documents/workshop/
+```
 3. Run the following command:
-   ```bash
-   ./Install_programs.sh
-   ```
+```bash
+./Install_programs.sh
+```
 
 After around 5-10 minutes, you should now have a conda environment called 'bioinfo-workshop' and you can run all the analysis from here.
 
 To enter this conda environment, open your terminal, navigate to the folder with the data and scripts, and enter the following command:
-  ```bash
-  conda activate bioinfo-workshop
-  ```
+```bash
+conda activate bioinfo-workshop
+```
 
-#### Windows users
+### Windows users
 
 For windows users, it is a little more complicated to install miniconda. 
 
 First, install WSL (Windows Subsystem for Linux)
 
-1. Open PowerShell as Administrator (Type it in your 
-   Run the following command:
-   ```bash
-    wsl --install
-   ```
+1. Open PowerShell as Administrator. Run the following command:
+```bash
+wsl --install
+```
 
 This will:
 
@@ -127,13 +126,15 @@ bash Install_programs.sh
 After around 5-10 minutes, you should now have a conda environment called 'bioinfo-workshop' and you can run all the analysis from here.
 
 To enter this conda environment, open your terminal, navigate to the folder with the data and scripts, and enter the following command:
-  ```bash
-  conda activate bioinfo-workshop
-  ```
+```bash
+conda activate bioinfo-workshop
+```
 
-7. Install these applications separately on windows
+<br>
 
-These programs must be installed directly on Windows (not through WSL):
+### All users
+
+Finally, these programs must be installed directly from their respective websites:
 
 [RStudio](https://posit.co/download/rstudio-desktop/)<br>
 [BEAST2](https://www.beast2.org/)<br>
