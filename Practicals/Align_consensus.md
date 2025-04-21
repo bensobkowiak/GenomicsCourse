@@ -1,25 +1,25 @@
 # Align consensus sequences
 
-In the previous exercise, we constructed a FASTA file of aligned sequences comprised of SNPs that was built using a VCF from sequences that had all been aligned to the same reference strain. In some cases though, you may receive different consensus sequences from different sources that are not already aligned. This may be because they have been mapped against different reference strains or assembled using a reference-free approach (e.g., _de novo_ assembly). This will be the case when downloading SARS-CoV-2 sequences from GISAID (Practical 1, exercise 1).
+In the previous exercise, we constructed a FASTA file of aligned sequences comprised of SNPs built using a VCF file from sequences that had all been aligned to the same reference strain. In some cases though, you may receive consensus sequences from different sources that have not been aligned. This may be because they have been mapped against different reference strains or assembled using a reference-free approach (e.g., _de novo_ assembly). This will be the case when downloading SARS-CoV-2 sequences from GISAID (Practical 1, exercise 1).
 
-To compare sequences and identify variation to allow for phylogenetic tree building and genomic comparison, sequences must be aligned so that the position of corresponding sites matches. Here, we will use the program "mafft" to align 1788 SARS-CoV-2 P.1 variant sequences that have been collected from North America and assembled in different groups. We will align the sequences against the well-characterized Wuhan-1 SARS-CoV-2 sequence (GenBank accession number MN908947.3), which is 29903 bp in length and has been been used previously as a reference strain.
+To compare sequences and identify variation to allow for phylogenetic tree building and genomic comparison, sequences must be aligned so that the position of corresponding sites matches. Here, we will use the program "mafft" to align the 246 SARS-CoV-2 B.1.1.7 variant sequences that have been collected from Taiwan and assembled in different groups. We will align the sequences against the well-characterized Wuhan-1 SARS-CoV-2 sequence (GenBank accession number MN908947.3), which is 29903 bp in length and has been been used previously as a reference strain.
 
 The data we will use for this exercise are:
 
-- **P1.fasta** - A FASTA file containing the unaligned 1788 SARS-CoV-2 P.1 sequences downloaded from GISAID.
+- **Taiwan_B.117.fasta** - A FASTA file containing the unaligned 246 SARS-CoV-2 B.1.1.7 sequences downloaded from GISAID.
 
 - **Wuhan1.fasta** - The Wuhan-1 SARS-CoV-2 strain.
 
 <br>
 
-1. View the unaligned "P1.fasta" file in AliView. It should look like this:
+1. View the unaligned "Taiwan_B.117.fasta" file in AliView. It should look like this:
 
     <img src="Pictures/AliView.jpeg" alt="Description1" width="90%"/>
 
 2. Input the following command to align the sequences to the Wuhan-1 reference strain:
 
 ```bash
-mafft --auto --thread -2 --keeplength --preservecase --addfragments P1.fasta Wuhan1.fasta > P1_aligned.fasta
+mafft --auto --thread -2 --keeplength --preservecase --addfragments Taiwan_B.117.fasta Wuhan1.fasta > Taiwan_B117_aligned.fasta
 ```
 
 _This may take a few minutes to execute._
@@ -31,9 +31,9 @@ _This may take a few minutes to execute._
 | `keeplength`      | Aligns the sequences while preserving the length of the reference strain. This is optimal to allow for better indexing of sites against the well-characterized reference sequence.                                                                                                    |
 | `preservecase`    | Retains all nucleotides as lower/uppercase.                                                                                                                 |
 | `addfragments`    | Will add fragments of sequences to existing alignments (good for closely related samples.                                                                                                                |
-| `P1.fasta`        | The name of our unaligned input file.                                                                                 |
+| `Taiwan_B117.fasta`        | The name of our unaligned input file.                                                                                 |
 | `Wuhan1.fasta`    | The name of our reference sequence.                                                                                   |
-| `P1_aligned.fasta`| The name of our output file.                                                                                          |
+| `Taiwan_B117_aligned.fasta`| The name of our output file.                                                                                          |
 
 
 This will align your sequences to the Wuhan 1 reference strain, and add the reference strain into the alignment (the name will be the GenBank accession number MN908947.3).
@@ -56,24 +56,24 @@ install.packages("seqinr")
 library(seqinr)
 ```
 
-6. Read in the aligned sequence file "P1_aligned.fasta". This will assign the sequence alignment as a list in R.
+6. Read in the aligned sequence file "Taiwan_B117_aligned.fasta". This will assign the sequence alignment as a list in R.
 
 ```R
-P1_aligned<-seqinr::read.fasta("P1_aligned.fasta", forceDNAtolower = F)
+P1_aligned<-seqinr::read.fasta("Taiwan_B117_aligned.fasta", forceDNAtolower = F)
 ```
 
-7. Try to write a short script in R that will change the nucleotides at the masked positions and call this new list "P1_aligned_masked"
+7. Try to write a short script in R that will change the nucleotides at the masked positions and call this new list "Taiwan_B117_aligned_masked"
 
 8. Save the new masked fasta file with the following command:
 
 ```R
-seqinr::write.fasta(P1_aligned_masked,names(P1_aligned_masked),"P1_aligned_masked.fasta",open = "w")
+seqinr::write.fasta(Taiwan_B117_aligned_masked,names(Taiwan_B117_aligned_masked),"Taiwan_B117_aligned_masked.fasta",open = "w")
 ```  
 
 _Tips:_ <br>
 _1. Each samples sequence is list element, so you can use the 'lapply' function to apply to all sequences_ <br>
 _2. Use the 'replace' function_ <br>
-_3. The names of each list element will not be carried out after replacing so add the names of "P1_aligned" to "P1_aligned_masked"_ <br>
+_3. The names of each list element will not be carried out after replacing so add the names of "Taiwan_B117_aligned" to "Taiwan_B117_aligned_masked"_ <br>
 
 Please work together if needed and if you get stuck, there is a solution [here](mask_sites.md).
 
