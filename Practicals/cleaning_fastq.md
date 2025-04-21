@@ -27,19 +27,19 @@ The format to use a flag is `Flag:Option(s)`.
 An example of how to run Trimmomatic is as follows:
 
 ```bash
-java -jar ./trimmomatic <SE or PE> <fastq file> <output fastq> <options>
+trimmomatic <SE or PE> <fastq file> <output fastq> <options>
 ```
 
 So for example, a simple command to remove the first 10 bases from the start of the single-end reads of ‘Test1.fastq.gz” and output a file containing these trimmed reads called 'Test1_trimmed.fastq.gz' would be:
 
 ```bash
-java -jar ./trimmomatic SE Test1.fastq.gz Test1_trimmed.fastq.gz HEADCROP:10
+trimmomatic SE Test1.fastq.gz Test1_trimmed.fastq.gz HEADCROP:10
 ```
 
 A more complex example is to remove an adapter sequence called “Truseq2-PE.fasta” (found in the ./Trimmomatic-0.39/adapters/” folder) from the pair-end read sequencing data ‘Test3_R1.fastq.gz' and ‘Test3_R2.fastq.gz'. We have set the seed mismatches at 2, palindrome clip threshold as 30, and the simple clip threshold as 10. Please note that ‘SE’ has now changed to ‘PE’.
 
 ```bash
-java -jar ./trimmomatic PE Test3_R1.fastq.gz Test3_R2.fastq.gz\
+trimmomatic PE Test3_R1.fastq.gz Test3_R2.fastq.gz\
 Test3_R1_paired.fastq.gz Test3_R1_unpaired.fastq.gz\
 Test3_R2_paired.fastq.gz Test3_R2_unpaired.fastq.gz\
 ILLUMINACLIP:./Trimmomatic-0.39/adapters/TruSeq2-PE.fa:2:30:10
