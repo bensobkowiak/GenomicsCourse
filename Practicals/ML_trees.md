@@ -2,7 +2,7 @@
 
 Once you have a sequence alignment, it is now possible to construct a phylogenetic tree. Approaches for building phylogenies can varying in complexity, from a relatively simple approach in Neighbour Joining trees that builds trees based on pairwise distances, to Maximum Likelihood and Bayesian methods. These are more complex and computationally intensive, and incorporate statistical models to infer the most probable evolutionary scenarios while considering branch lengths and substitution rates and models of evolution, which offers a nuanced depiction of evolutionary processes.
 
-For this exercise, you will be build a ML tree using the aligned and masked SARS-CoV-2 P.1 variant alignment we produced in the last exercise - **"P1_aligned_masked.fasta"**. Here we are using the full genome of SARS-CoV-2 but your input file could equally be any aligned sequence or partial sequence, for example an alignment of concatenated SNPs or an alignment of single or multiple genes in isolation. 
+For this exercise, you will be build a ML tree using the aligned and masked SARS-CoV-2 B.1.1.7 variant alignment we produced in the last exercise - **"Taiwan_B117_aligned_masked.fasta"**. Here we are using the full genome of SARS-CoV-2 but your input file could equally be any aligned sequence or partial sequence, for example an alignment of concatenated SNPs or an alignment of single or multiple genes in isolation. 
 
 _Keep in mind though that if you are using a partial genome sequence then branch lengths and substitution rates will be scaled to the length of the input sequence rather than the full genome._
 
@@ -15,10 +15,10 @@ The ML tree will build the phylogeny using nucleotide substitution models, which
 1. We first want to perform a model test in IQtree to determine the optimal substitution model for our sequence data. More information about the options for this can be found [here](http://www.iqtree.org/doc/Tutorial).
 
 ```bash
-iqtree -s P1_aligned_masked.fasta -m TEST -T 2
+iqtree -s Taiwan_B117_aligned_masked.fasta -m TEST -T 2
 ```
 
-This will create a zipped file called "P1_aligned_masked.fasta.model.gz" with the results of the model test. Unzip it and open it using a text viewer. We have provided you with this result in the data folder.
+This will create a zipped file called "Taiwan_B117_aligned_masked.fasta.model.gz" with the results of the model test. Unzip it and open it using a text viewer. We have provided you with this result in the data folder.
 
 
 _Question: What is the best substitution model identified in this run?_
@@ -29,7 +29,7 @@ _Question: What is the best substitution model identified in this run?_
 2. Next we can build a ML tree using this optimal substitution model after the (-m) option. We can also produce a tree with branch and node support (how confident we are with the branch lengths and node placement) by running the command by bootstrapping with the -B option following by an integer, and an assessment of the branch support using -alrt following by an integer. More information on bootstrapping and branch support is available [here](http://www.iqtree.org/doc/Tutorial):
 
 ```bash
-iqtree -s P1_aligned_masked.fasta -m model --prefix P1_MLtree -alrt 1000 -B 1000 -keep-ident -T 2
+iqtree -s Taiwan_B117_aligned_masked.fasta -m model --prefix Taiwan_B117_MLtree -alrt 1000 -B 1000 -keep-ident -T 2
 ```
 
 _*Replace 'model' with the name of the best performing model from the previous model test result._
@@ -41,15 +41,15 @@ The other options called in this command are: <br>
 * -T = The number of threads
 
 
-There will be 9 output files created with this run, the important file will be the "P1_MLtree.treefile", which contains the best tree found by ML with the support values added.
+There will be 9 output files created with this run, the important file will be the "Taiwan_B117_MLtree.treefile", which contains the best tree found by ML with the support values added.
 
 
 
-3. Now we can view the "P1_MLtree.treefile". 
+3. Now we can view the "Taiwan_B117_MLtree.treefile". 
 
 - Please open FigTree.
 
-- Go to File > Open and select "P1_MLtree.treefile".
+- Go to File > Open and select "Taiwan_B117_MLtree.treefile".
 
 - Click 'OK' on the next screen. Now you should see the tree.
 
