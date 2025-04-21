@@ -59,7 +59,7 @@ library(seqinr)
 6. Read in the aligned sequence file "Taiwan_B117_aligned.fasta". This will assign the sequence alignment as a list in R.
 
 ```R
-P1_aligned<-seqinr::read.fasta("Taiwan_B117_aligned.fasta", forceDNAtolower = F)
+B117_aligned<-seqinr::read.fasta("Taiwan_B117_aligned.fasta", forceDNAtolower = F)
 ```
 
 7. Try to write a short script in R that will change the nucleotides at the masked positions and call this new list "Taiwan_B117_aligned_masked"
