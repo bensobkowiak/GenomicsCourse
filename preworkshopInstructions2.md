@@ -1,8 +1,10 @@
 # Genomic Analysis and Phylodynamics Workshop
 
-## Pre-course Instructions
+### Pre-course Instructions
 
 Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
+
+<br>
 
 ## Data and Scripts
 
@@ -66,6 +68,8 @@ To enter this conda environment, open your terminal, navigate to the folder with
 ```bash
 conda activate bioinfo-workshop
 ```
+
+<br>
 
 ### Windows users
 
