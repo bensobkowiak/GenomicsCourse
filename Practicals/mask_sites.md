@@ -2,10 +2,10 @@ Solution to masking sites:
 
 ```R
 require(seqinr)
-fasta<-seqinr::read.fasta("Taiwan_B117_aligned.fasta",forceDNAtolower = F)
+B117_aligned<-seqinr::read.fasta("Taiwan_B117_aligned.fasta",forceDNAtolower = F)
 mask_positions<-c(1:264,29674:29903)
-newfasta<-lapply(1:length(fasta), function(x){replace(fasta[[x]],mask_positions,"N")})
-names(newfasta)<-names(fasta)
+newfasta<-lapply(1:length(B117_aligned), function(x){replace(B117_aligned[[x]],mask_positions,"N")})
+names(newfasta)<-names(B117_aligned)
 seqinr::write.fasta(newfasta,names(newfasta),"Taiwan_B117_aligned_masked.fasta",open = "w")
 ```
 
