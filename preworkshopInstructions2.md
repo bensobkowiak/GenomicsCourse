@@ -4,6 +4,8 @@
 
 Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
 
+Please create a new folder in which you will keep all the course materials and scripts (e.g., something like /Users/yourname/Documents/workshop/).
+
 <br>
 
 ## Data and Scripts
@@ -19,7 +21,7 @@ Please download all data and scripts required for this course by clicking the fo
 
 The easiest method for downloading all the software required for the workshop is to first download miniconda. 
 
-- Mac users, please following these instructions:
+#### Mac users, please following these instructions:
 
 1. Open the Terminal.
 
@@ -33,7 +35,7 @@ bash ~/miniconda.sh -b -p $HOME/miniconda
 # Follow prompts, then restart terminal
 ```
 
-- Linux users, please follow these instructions:
+#### Linux users, please follow these instructions:
 
 1. Open the Terminal.
 
@@ -47,7 +49,7 @@ bash ~/miniconda.sh -b -p $HOME/miniconda
 # Follow prompts, then restart terminal
 ```
 
-- Both Mac and Linux users:
+#### Both Mac and Linux users:
   
 Following the link to download the scripts above, you should have downloaded three scripts - Install_programs.sh, workshop_env.yml, and install_r_github.R. These are the three scripts required to download all the programs required for the workshop.
 
@@ -59,13 +61,14 @@ cd /Users/yourname/Documents/workshop/
 ```
 3. Run the following command:
 ```bash
-./Install_programs.sh
+bash Install_programs.sh
 ```
 
 After around 5-10 minutes, you should now have a conda environment called 'bioinfo-workshop' and you can run all the analysis from here.
 
-To enter this conda environment, open your terminal, navigate to the folder with the data and scripts, and enter the following command:
+To enter this conda environment, open your terminal, navigate to the folder with the data and scripts, and enter the following commands:
 ```bash
+source "$HOME/miniconda/etc/profile.d/conda.sh"
 conda activate bioinfo-workshop
 ```
 
