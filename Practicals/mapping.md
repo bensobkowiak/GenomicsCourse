@@ -177,5 +177,4 @@ Compare this to the sequence at 1,986,639. What do you think the difference is b
 
 ---
 
-### This is the end of the activities in practical session 1. Navigate back to the homepage for other activities [here](../README.md).
-
+Next activity: [De novo assembly](denovo.md)
