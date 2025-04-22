@@ -1,6 +1,6 @@
 # Genomic Analysis and Phylodynamics Workshop
 
-### Pre-course Instructions
+## Pre-course Instructions
 
 Please following these instructions to download all programs and data for the course. You will require ~ 1GB of space to install all programs and data.
 
@@ -95,11 +95,11 @@ When prompted, restart your computer
 
 2. Set up Ubuntu in WSL
 
-After reboot, Ubuntu will open automatically. Wait for installation to complete then choose a username and password when prompted. This opens a Linux terminal (Ubuntu shell).
+After reboot, Ubuntu should open automatically, though if not, please open WSL app manually. Wait for installation to complete then choose a username and password when prompted. This opens a Linux terminal (Ubuntu shell).
 
 3. Install Miniconda inside WSL (Ubuntu)
 
-In the Ubuntu terminal, run the following:
+In the WSL terminal, run the following:
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh
@@ -107,9 +107,14 @@ bash miniconda.sh
 
 Accept the license agreement and confirm the default install location (e.g., /home/yourname/miniconda3)/
 
-When installation finishes, close and reopen the terminal or run:
+When installation finishes, close and reopen WSL, or run:
 ```bash
 source ~/.bashrc
+```
+
+Export conda into your path with the following command:
+```bash
+export PATH=~/miniconda3/bin:$PATH
 ```
 
 Check that Conda is available:
