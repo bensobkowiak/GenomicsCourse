@@ -2,18 +2,18 @@
 
 De novo assembly is the process of reconstructing genomes from sequencing read data without the use of a reference genome. It involves overlapping and merging reads to form longer contiguous sequences (contigs) that represent the genomic sequence. This process is useful when no suitable reference genome is available or when the goal is to discover novel genomic features, such as structural variations, insertions, or new genes. It is also valuable for assembling organisms with high levels of recombination, as it allows reconstruction of unique genome arrangements without bias from a reference.
 
-We will use a *de novo* assembly software called [Spades](https://github.com/ablab/spades). 
+We will use a *de novo* assembly software called [Unicycler](https://github.com/rrwick/Unicycler). 
 
 For this activity, we will use the following files found in your /data/ folder:
 
-- **Kleb1_R1.fastq.gz** and **Kleb1_R2.fastq.gz** – Paired-end 250bp sequence data from _Mycobacterium tuberculosis_, collected from sputum and cultured before DNA library preparation. These have been inspected and cleaned already.
+- **Kleb1_R1.fastq.gz** and **Kleb1_R2.fastq.gz** – Paired-end 150bp sequence data from _Klebsiella pneumoniae_, collected in Taiwan. These have been inspected and cleaned already.
 
 <br>
 
-1. First we can view the options in BWA by simply typing the following command in your terminal:
+1. First we can view the options in Unicycler by simply typing the following command in your terminal:
 
 ```bash
-  bwa
+unicycler
 ```
 
 This will display all options for BWA:
