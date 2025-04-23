@@ -3,13 +3,11 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="https://bensobkowiak.github.io/GenomicsCourse/assets/style.css">
+  <title>{{ page.title | default: site.name }}</title>
+  <link rel="stylesheet" href="/GenomicsCourse/assets/style.css">
 </head>
 <body>
-  {% unless page.path == "index.md" or page.path == "README.md" or page.path == "https://bensobkowiak.github.io/GenomicsCourse/preworkshopInstructions2.html" %}
-    {% include sidebar.html %}
-  {% endunless %}
+  {% include sidebar.html %}
   <div class="content">
     {{ content }}
   </div>
