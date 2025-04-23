@@ -1,12 +1,13 @@
 body {
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #f7f7f7;
+  width: 180px;
+  background: #6d946f;
+  color: white;
   padding: 20px;
   position: fixed;
   top: 0;
