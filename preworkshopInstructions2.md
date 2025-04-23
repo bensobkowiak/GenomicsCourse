@@ -1,6 +1,3 @@
----
-layout: none
----
 # Genomic Analysis and Phylodynamics Workshop
 
 ## Pre-course Instructions
