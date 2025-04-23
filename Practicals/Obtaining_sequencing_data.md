@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Obtaining sequence data
 ---
 # Obtaining sequence data
 
