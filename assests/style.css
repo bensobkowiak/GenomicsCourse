@@ -43,5 +43,5 @@ body {
 .content {
   margin-left: 200px; /* must be at least sidebar width + padding */
   padding: 20px;
-  width: calc(100% - 220px);
+  width: calc(100% - 200px);
 }
