@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: Obtaining sequence data
+---
 # Obtaining sequence data
 
 While you will be provided with all the data you need for this course, normally you would either receive data directly from the sequencer/sequencing facility, from collaborators that hold the data (perhaps through a secure link), or download data from a number of publicly accessible databases.
