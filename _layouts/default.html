@@ -1,3 +1,4 @@
+{% if page.layout != "none" %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +10,11 @@
   {% unless page.path == "index.md" or page.path == "README.md" or page.path == "https://bensobkowiak.github.io/GenomicsCourse/preworkshopInstructions2.html" %}
     {% include sidebar.html %}
   {% endunless %}
-  
   <div class="content">
     {{ content }}
   </div>
 </body>
 </html>
+{% else %}
+{{ content }}
+{% endif %}
