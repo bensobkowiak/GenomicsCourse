@@ -162,4 +162,4 @@ Finally, these programs must be installed directly from their respective website
 
 ## Please attempt to download all data and software prior to the course start. If you have any issues, please get in [contact](mailto:b.sobkowiak.12@ucl.ac.uk).
 
-Click [here](index.md) to return to the course homepage.
+Click [here](README.md) to return to the course homepage.
