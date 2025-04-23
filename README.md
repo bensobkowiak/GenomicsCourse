@@ -1,6 +1,5 @@
 
 # Genomic Analysis and Phylodynamics Workshop 
-## National Taiwan University 2025
 
 
 ![Title Image](Sequence_trees.png)
@@ -17,7 +16,7 @@ Please click the link below for instructions to download and install all data an
 
 ---
 
-## Schedule
+## Schedule - National Taiwan University 2025
 
 
 | Date            | Time         | Session                                                         | Description                                                                                                                                              |
