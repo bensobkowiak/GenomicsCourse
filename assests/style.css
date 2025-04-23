@@ -26,6 +26,10 @@ body {
   margin-bottom: 10px;
 }
 
+.sidebar li ul {
+  margin-left: 15px;   /* indent nested lists */
+}
+
 .sidebar a {
   text-decoration: none;
   color: #333;
