@@ -24,23 +24,18 @@ treetime --tree Taiwan_B117_MLtree.treefile --dates Taiwan_B117_dates.csv --aln 
 
 <br>
 
-### Where the parameters are as follows: <br>
-
-- --tree = The input un-timed phylogeny. <br>
-		- Here we have used a ML tree but any type (parsimony, neighbour-joining) can be used if branch lengths are in substitution per site. <br>
-- --dates = A CSV file with tip names and dates (format %Y-%m-%d or decimal year) in the first two columns. <br>
-		- These can be collection dates or date of symptom onset. Some dates can be partial or missing. <br>
-- --aln = The alignment file used to create the un-timed phylogeny. <br>
-		- TreeTime can also take a VCF file as input. <br>
-- --outdir = The name to use as the directory to save all output files. <br>
-- --clock-rate = A fixed clock rate to use in substitutions/site/time. <br>
-		- This can be removed if the clock rate can be confidently estimated from the data. <br>
-- --clock-std-dev = The standard deviation on the clock rate in substitutions/site/time. <br>
-		- Only to be used if using the --clock-rate parameter. <br>
-- --reroot = Re-root the tree to the named sequence. <br>
-		- This can also be set to 'oldest' to re-root on the sequence with the oldest date. <br>
-- --coalescent = Activates the Kingman Coalescent model. <br>
-		- This can be set as constant or skyline, or left blank to run without a tree prior. <br>
+Where the parameters are as follows: 
+ 
+| Option                                         | Description                                                                                                  |
+|------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| --tree                       | The input un-timed phylogeny. Here we have used a ML tree but any type (parsimony, neighbour-joining) can be used if branch lengths are in substitution per site.                                                            |
+| --dates                      | A CSV file with tip names and dates (format %Y-%m-%d or decimal year) in the first two columns.     These can be collection dates or date of symptom onset. Some dates can be partial or missing.                                                        |
+| --aln                       | The alignment file used to create the un-timed phylogeny.                                                             |
+| --outdir                       | The name to use as the directory to save all output files.                                                            |
+| --clock-rate                       | A fixed clock rate to use in substitutions/site/time. This option can be removed if the clock rate can be confidently estimated from the data.                                                          |
+| --clock-std-dev                       | The standard deviation on the clock rate in substitutions/site/time. Only to be used if using the --clock-rate parameter.                                                          |
+| --reroot                       | Re-root the tree to the named sequence. This can also be set to 'oldest' to re-root on the sequence with the oldest date.                                                         |
+| --coalescent                       | Activates the Kingman Coalescent model. This can be set as constant or skyline, or left blank to run without a tree prior.                                                       |
 
 There are other parameters that can be included when running TreeTime, for full details please see [here](https://treetime.readthedocs.io/en/latest/tutorials/timetree.html).
 
