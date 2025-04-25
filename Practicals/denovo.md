@@ -1,6 +1,10 @@
 # De novo (reference-free) assembly 
 
-De novo assembly is the process of reconstructing genomes from sequencing read data without the use of a reference genome. It involves overlapping and merging reads to form longer contiguous sequences (contigs) that represent the genomic sequence. This process is useful when no suitable reference genome is available or when the goal is to discover novel genomic features, such as structural variations, insertions, or new genes. It is also valuable for assembling organisms with high levels of recombination, as it allows reconstruction of unique genome arrangements without bias from a reference.
+De novo assembly is the process of reconstructing genomes from sequencing read data without the use of a reference genome. It involves overlapping and merging reads to form longer contiguous sequences (contigs) that represent the genomic sequence. 
+
+This process is useful when no suitable reference genome is available or when the goal is to discover novel genomic features, such as structural variations, insertions, or new genes. It is also valuable for assembling organisms with high levels of recombination, as it allows reconstruction of unique genome arrangements without bias from a reference.
+
+The goal is to assemble the read data into a single consensus sequence, though this is rarely achieved with short-read data and you will likely have multiple contigs. Long-read sequencing data is much more likely to 
 
 We will use a *de novo* assembly software called [Unicycler](https://github.com/rrwick/Unicycler). This program uses an assembly software called [SPAdes](https://github.com/ablab/spades) to assemble the sequencing reads into contigs, polishes the assemblies to improve the accuracy, and where possible, will circularize genomes.
 
@@ -18,7 +22,7 @@ unicycler
 
 This will display all options for Unicycler:
 
-<img src="Pictures/Unicycler1.jpeg" alt="Description" width="60%"/>
+<img src="../Pictures/Unicycler1.jpeg" alt="Description" width="60%"/>
 
 <br>
 
@@ -39,8 +43,50 @@ Where the options specified are:
 | -o                       | The name of the output directory                                                             |
 
 
-3. We will now have the final assembly files for the optimal k-mer length that Unicycler determines using some quality metrics (outlined on the Unicycler Github). These files include:
+We will now have the de novo assembled contigs using the optimal k-mer length that Unicycler determines using some quality metrics (outlined on the Unicycler Github). These will be contained in the /Kleb1/ folder.
 
+3. Navigate to this folder and view the files:
+
+```bash
+cd Kleb1/
+ls #this is the command to view files
+```
+
+These files include a FASTA file with the assembled contigs (assembly.fasta)
+
+4. View the fasta file in AliView:
+   
+<img src="../Pictures/denovo1.jpeg" alt="Description" width="60%"/>
+
+#### Discuss the assembled contigs, do you think we have reconstructed the complete genome?
+
+
+Instead of inspecting the files manually, we can use software such as [QUAST}(https://github.com/ablab/quast) to calculate different metrics to assess our assemblies.
+
+
+5. Run QUAST with the following command to calculate assembly metrics and output the new files to a folder called QUAST/:
+
+```bash
+quast -o QUAST assembly.fasta
+```
+
+This will produce files in multiple formats that show the assembly metrics in the Kleb1/QUAST/ folder. We will view the 'report.txt; file.
+<br>
+
+6. Either open the report.txt file in your text editor, or view it in Terminal or WSL using the following command:
+
+```bash
+cd QUAST/
+vi report.txt
+```
+
+The report.txt file look like this:
+
+<img src="../Pictures/denovo2.jpeg" alt="Description" width="60%"/>
+
+#### Please discuss the output - 1. How many contigs do we have? 2. Given that the Klebsiella pneumoniae genome is ~5.5MB, do we think we have reconstructed the full genome?
+
+Some of the metrics are not as intuitive (e.g., N50, L50). We may not have time to discuss but these are important to determine the contiguity of the assembly. Please read [here](https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics) for more details.
 
 ---
 
