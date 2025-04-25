@@ -6,11 +6,11 @@ First, we will use [TreeTime](https://treetime.readthedocs.io/en/latest/tutorial
 
 The following files will be used for this exercise:
 
-- **P1_aligned_masked.fasta** – The aligned multisequence FASTA file of 1788 SARS-CoV-2 sequences downloaded from GISAID and aligned and masked in previous exercises.
+- **Taiwan_B117_aligned_masked.fasta** – The aligned multisequence FASTA file of 246 SARS-CoV-2 B.1.1.7 sequences from Taiwan downloaded from GISAID and aligned and masked in previous exercises.
 
-- **P1_MLtree.treefile** – The un-timed Maximum Likelihood phylogeny produced from the 1788 SARS-CoV-2 sequences in the previous exercise. This has also been provided for you in the Data folder.
+- **Taiwan_B117_MLtree.treefile** – The un-timed Maximum Likelihood phylogeny with bootstrapping produced from the 246 SARS-CoV-2 sequences in the previous exercise. This has also been provided for you in the Data folder.
 
-- **P1_dates_location.csv** – A CSV file containing the sequence names (column 1), collection dates (column 2), and location of collection (column 3) for the P1 SARS-CoV-2 sequences.
+- **Taiwan_B117_dates.csv** – A CSV file containing the sequence names (column 1) and collection dates (column 2) of the 246 SARS-CoV-2 B.1.1.7 sequences from Taiwan.
 
 
 
@@ -19,7 +19,7 @@ The following files will be used for this exercise:
 ### To run TreeTime we will use the following command:
 
 ```bash
-treetime --tree P1_MLtree.treefile --dates P1_dates_location.csv --aln P1_aligned_masked.fasta --outdir P1_treetime --clock-rate 0.0008 --clock-std-dev 0.0004 --reroot MN908947.3 --coalescent skyline
+treetime --tree Taiwan_B117_MLtree.treefile --dates Taiwan_B117_dates.csv --aln Taiwan_B117_aligned_masked.fasta --outdir Taiwan_B117_treetime --clock-rate 0.0008 --clock-std-dev 0.0004 --reroot MN908947.3 --coalescent skyline
 ``` 
 
 <br>
@@ -46,7 +46,7 @@ There are other parameters that can be included when running TreeTime, for full 
 
 <br>
 
-### Explore the output from TreeTime, there will be 11 files in the "P1_treetime" folder:
+### Explore the output from TreeTime, there will be 11 files in the "Taiwan_B117_treetime" folder:
 
 1. Open "ancestral_sequences.fasta":
 
