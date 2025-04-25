@@ -2,7 +2,7 @@
 
 De novo assembly is the process of reconstructing genomes from sequencing read data without the use of a reference genome. It involves overlapping and merging reads to form longer contiguous sequences (contigs) that represent the genomic sequence. This process is useful when no suitable reference genome is available or when the goal is to discover novel genomic features, such as structural variations, insertions, or new genes. It is also valuable for assembling organisms with high levels of recombination, as it allows reconstruction of unique genome arrangements without bias from a reference.
 
-We will use a *de novo* assembly software called [Unicycler](https://github.com/rrwick/Unicycler). This program uses an assembly software called [SPAdes](https://github.com/ablab/spades) to   
+We will use a *de novo* assembly software called [Unicycler](https://github.com/rrwick/Unicycler). This program uses an assembly software called [SPAdes](https://github.com/ablab/spades) to assemble the sequencing reads into contigs, polishes the assemblies to improve the accuracy, and where possible, will circularize genomes.
 
 For this activity, we will use the following files found in your /data/ folder:
 
